@@ -20,7 +20,7 @@
 	<name>Eclipse Product Plugin</name>
 
 	<parent>
-		<version>4.29.0-SNAPSHOT</version>
+		<version>4.29.0</version>
 		<groupId>de.tgmz</groupId>
 		<artifactId>de.tgmz.eclipse.parent</artifactId>
 	</parent>

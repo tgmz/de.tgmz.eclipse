@@ -11,13 +11,16 @@
   *******************************************************************************/
 -->
 
-# Toms Eclipse
+# My Eclipse
 
+This is a sample for building a personalized Eclipse-IDE. 
+
+To adopt simply edit the target, product and config.ini
 
 ## Included Plugins
 *   Base: Eclipse 2023-09 
 *   JEE, Web Developer Tools
-*	Dali Persistence Tools
+*	CVS Client
 *	Maven (m2e)
 *   Buildship (Gradle)
 *	Git
