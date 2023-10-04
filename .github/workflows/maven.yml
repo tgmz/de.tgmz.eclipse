@@ -1,16 +1,19 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
-
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
+# Copyright (c) 02.10.2023 Thomas Zierer.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v2.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v20.html
+#
+# Contributors:
+#    Thomas Zierer - initial API and implementation and/or initial documentation
 
 name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
+      - 'feature/**'
   pull_request:
     branches: [ "main" ]
 
@@ -35,4 +38,11 @@ jobs:
         maven-version: 3.9.4        
         
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B verify -Pmaterialize --file pom.xml
+      
+    - run: mkdir staging && cp de.tgmz.eclipse.product/target/products/*.zip staging
+    
+    - uses: actions/upload-artifact@v3
+      with:
+        name: Package
+        path: staging      
