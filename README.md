@@ -15,7 +15,13 @@
 
 This is a sample for building a personalized Eclipse-IDE. 
 
-To adopt simply edit the target, product and config.ini
+## Adopt
+To adopt, simply edit the target, product and config.ini files
+
+## Build
+Run `mvn verify -Pmaterialize` and unzip de.tgmz.eclipse.product\target\products\eclipse-win32.win32.x86_64.zip
+ 
+Configure other platforms in pom.xml (parent & product)
 
 ## Included Plugins
 *   Base: Eclipse 2023-09 
