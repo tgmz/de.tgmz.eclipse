@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="4.19"?>
+<target name="Eclipse Target" sequenceNumber="71">
+	<locations>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<repository location="https://download.eclipse.org/releases/2021-12/"/>
+			<unit id="org.eclipse.cvs.feature.group" version="0.0.0"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<repository location="https://download.eclipse.org/releases/2023-09/"/>
+			<unit id="org.eclipse.buildship.feature.group" version="3.1.7.v20230428-1350"/>
+			<unit id="org.eclipse.eclemma.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.egit.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.egit.gitflow.feature.feature.group" version="0.0.0"/>
+			<!-- Do not delete epp package or the splashscreen vanishes -->
+			<unit id="org.eclipse.epp.package.common.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.epp.package.jee.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jgit.lfs.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jgit.ssh.apache.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jpt.jaxb.eclipselink.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jpt.jaxb.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jpt.jpa.eclipselink.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jpt.jpa.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jpt.jpadiagrameditor.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jsf.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.common.fproj.enablement.jdt.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.enterprise_ui.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.jsf.apache.trinidad.tagsupport.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.server_adapters.ext.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.server_adapters.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.server_ui.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.web_ui.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.webpageeditor.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.ws.axis2tools.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.ws.cxf.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.ws.jaxws.dom.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.ws.jaxws.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.lsp4j.sdk.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.m2e.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.m2e.logback.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.m2e.pde.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.m2e.wtp.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.m2e.wtp.jaxrs.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.m2e.wtp.jpa.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.m2e.wtp.jsf.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.sdk.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.tips.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.tm.terminal.connector.local.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.tm.terminal.connector.ssh.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.tm.terminal.connector.telnet.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.tm.terminal.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.wildwebdeveloper.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.wst.common.fproj.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.wst.jsdt.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.wst.server_adapters.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.wst.web_ui.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.wst.xml_ui.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.wst.xsl.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.jst.web_js_support.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.wildwebdeveloper.embedder.node.feature.feature.group" version="0.0.0"/>
+			<unit id="org.eclipse.wst.web_js_support.feature.feature.group" version="0.0.0"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<repository location="https://ecd-plugin.github.io/update/"/>
+			<unit id="org.sf.feeling.decompiler.cfr.feature.group" version="0.0.0"/>
+			<unit id="org.sf.feeling.decompiler.feature.group" version="0.0.0"/>
+			<unit id="org.sf.feeling.decompiler.jd.feature.group" version="0.0.0"/>
+			<unit id="org.sf.feeling.decompiler.procyon.feature.group" version="0.0.0"/>
+			<unit id="org.sf.feeling.decompiler.source.feature.group" version="0.0.0"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<repository location="https://dbeaver.io/update/latest/"/>
+			<unit id="org.jkiss.dbeaver.ide.feature.feature.group" version="0.0.0"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<repository location="https://download.eclipse.org/justj/jres/17/updates/release/17.0.5/"/>
+			<unit id="org.eclipse.justj.openjdk.hotspot.jre.full.feature.group" version="0.0.0"/>
+		</location>
+	</locations>
+</target>

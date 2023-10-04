@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*******************************************************************************
+  * Copyright (c) 10.03.2022 Thomas Zierer.
+  * All rights reserved. This program and the accompanying materials
+  * are made available under the terms of the Eclipse Public License v2.0
+  * which accompanies this distribution, and is available at
+  * http://www.eclipse.org/legal/epl-v20.html
+  *
+  * Contributors:
+  *    Thomas Zierer - initial API and implementation and/or initial documentation
+  *******************************************************************************/
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.tgmz</groupId>
+	<artifactId>de.tgmz.eclipse.parent</artifactId>
+	<version>4.29.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Eclipse Parent</name>
+
+	<description>Eclipse Parent</description>
+
+	<inceptionYear>2023</inceptionYear>
+
+	<licenses>
+		<license>
+			<name>Copyright by Thomas Zierer 2021 - 2023. All rights reserved</name>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>tgmz</id>
+			<name>Thomas Zierer</name>
+			<email>thomas.zierer@muenchen-mail.de</email>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<tycho-version>4.0.1</tycho-version>
+	</properties>
+
+	<modules>
+		<module>de.tgmz.eclipse.target</module>
+		<module>de.tgmz.eclipse.product</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>                                                                                                                                                                                       	
+				<groupId>org.apache.rat</groupId>                                                                                                                                                                     
+				<artifactId>apache-rat-plugin</artifactId>                                                                                                                                                            
+				<version>0.13</version>                                                                                                                                                                               
+				<configuration>                                                                                                                                                                                     
+					<consoleOutput>true</consoleOutput>                                                                                                                                                                
+					<ignoreErrors>false</ignoreErrors>                                                                                                                                                                 
+					<licenses>
+						<license implementation="org.apache.rat.analysis.license.SimplePatternBasedLicense">
+							<licenseFamilyCategory>TGMZ</licenseFamilyCategory>
+							<licenseFamilyName>TGMZ</licenseFamilyName>
+							<notes></notes>
+							<patterns>
+								<pattern>Thomas Zierer</pattern>
+							</patterns>
+						</license>
+					</licenses>
+					<licenseFamilies>
+						<licenseFamily implementation="org.apache.rat.license.SimpleLicenseFamily">
+							<familyName>TGMZ</familyName>
+						</licenseFamily>
+					</licenseFamilies>
+       				<excludes combine.children="append">                                                                                                                                                       
+           				<!-- Eclipse stuff -->                                                                                                                                                                 
+           				<exclude>**/.project</exclude>                                                                                                                                                         
+           				<!-- Generated -->                                                                                                                                                                     
+           				<exclude>**/*.target</exclude>                                                                                 
+           				<exclude>**/*.launch</exclude>                                                                                                                                                         
+           				<exclude>**/*.polyglot.*</exclude>
+           				<exclude>**/MANIFEST.MF</exclude>
+           				<exclude>**/.META-INF_MANIFEST.MF</exclude>
+           				<exclude>**/build.properties</exclude>                                                                                                                                                         
+           				<!-- Build output -->                                                                                                                                                                  
+           				<exclude>**/bin/**</exclude>                                                                                                                                                           
+           				<exclude>**/target/**</exclude>                                                                                                                                                        
+           				<!-- Dummy -->                                                                                                                                                                         
+           				<!-- Binaries -->                                                                                                                                                                      
+           				<exclude>**/extensions/**</exclude>                                                                                                                                                    
+       				</excludes>                                                                                                                                                                                
+       			</configuration>                                                                                                                                                                            
+	        </plugin>                                                                                                                                                                                      
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-versions-plugin</artifactId>
+				<version>${tycho-version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<executionEnvironment>org.eclipse.justj.openjdk.hotspot.jre.full-17</executionEnvironment>
+					<target>
+						<artifact>
+							<groupId>de.tgmz</groupId>
+							<artifactId>de.tgmz.eclipse.target</artifactId>
+							<version>${project.version}</version>
+						</artifact>
+					</target>
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<!-- Witzig, aber sinnlos und verl&auml;ngert nur den build <environment> 
+							<os>linux</os> <ws>gtk</ws> <arch>x86_64</arch> </environment> <environment> 
+							<os>macosx</os> <ws>cocoa</ws> <arch>x86_64</arch> </environment> -->
+					</environments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>target-platform-validation-plugin</artifactId>
+				<version>${tycho-version}</version>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho.extras</groupId>
+					<artifactId>target-platform-validation-plugin</artifactId>
+					<version>${tycho-version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-surefire-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<useUIHarness>true</useUIHarness>
+						<useProjectSettings>false</useProjectSettings>
+						<useJDK>${useJDK}</useJDK>
+						<includes>
+							<include>**/*Test.java</include>
+						</includes>
+						<!-- Kill test JVM if tests take more than 10 minutes (600 seconds)to finish -->
+						<forkedProcessTimeoutInSeconds>600</forkedProcessTimeoutInSeconds>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<profiles>
+		<profile>
+			<id>jdk17</id>
+			<properties>
+				<useJDK>SYSTEM</useJDK>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>jdk8</id>
+			<properties>
+				<useJDK>BREE</useJDK>
+			</properties>
+			<activation>
+				<jdk>1.8</jdk>
+			</activation>
+		</profile>
+	</profiles>
+</project>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Eclipse" uid="eclipse" id="org.eclipse.platform.ide" application="org.eclipse.ui.ide.workbench" version="4.29.0.qualifier" type="features" includeLaunchers="true" autoIncludeRequirements="true">
+
+   <configIni use="default">
+      <win32>/de.tgmz.eclipse.product/config.ini</win32>
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-showsplash
+org.eclipse.epp.package.common
+      </programArgs>
+      <vmArgs>-Declipse.pluginCustomization=config.ini
+-Dosgi.requiredJavaVersion=11
+-Dosgi.instance.area.default=@user.home/eclipse-workspace
+-Dsun.java.command=Eclipse
+-XX:+UseG1GC
+-XX:+UseStringDeduplication
+-Xms256m
+-Xmx2048m
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <vm>
+      <windows include="true">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11</windows>
+   </vm>
+
+   <license>
+        <text>
+   Copyright (c) 02.10.2023 Thomas Zierer.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v2.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v20.html
+         </text>
+   </license>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="org.eclipse.buildship" installMode="root"/>
+      <feature id="org.eclipse.cvs" installMode="root"/>
+      <feature id="org.eclipse.draw2d" installMode="root"/>
+      <feature id="org.eclipse.e4.rcp" installMode="root"/>
+      <feature id="org.eclipse.ecf.core.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.core.ssl.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.filetransfer.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.filetransfer.httpclient5.feature" installMode="root"/>
+      <feature id="org.eclipse.ecf.filetransfer.ssl.feature" installMode="root"/>
+      <feature id="org.eclipse.eclemma.feature" installMode="root"/>
+      <feature id="org.eclipse.egit.gitflow.feature" installMode="root"/>
+      <feature id="org.eclipse.egit" installMode="root"/>
+      <feature id="org.eclipse.epp.package.common.feature" installMode="root"/>
+      <feature id="org.eclipse.epp.package.jee.feature" installMode="root"/>
+      <feature id="org.eclipse.equinox.executable" installMode="root"/>
+      <feature id="org.eclipse.equinox.p2.core.feature" installMode="root"/>
+      <feature id="org.eclipse.equinox.p2.extras.feature" installMode="root"/>
+      <feature id="org.eclipse.equinox.p2.rcp.feature" installMode="root"/>
+      <feature id="org.eclipse.equinox.p2.user.ui" installMode="root"/>
+      <feature id="org.eclipse.gef" installMode="root"/>
+      <feature id="org.eclipse.graphiti.feature" installMode="root"/>
+      <feature id="org.eclipse.help" installMode="root"/>
+      <feature id="org.eclipse.jdt.astview.feature" installMode="root"/>
+      <feature id="org.eclipse.jdt.bcoview.feature" installMode="root"/>
+      <feature id="org.eclipse.jdt.jeview.feature" installMode="root"/>
+      <feature id="org.eclipse.jdt" installMode="root"/>
+      <feature id="org.eclipse.jgit.gpg.bc" installMode="root"/>
+      <feature id="org.eclipse.jgit.http.apache" installMode="root"/>
+      <feature id="org.eclipse.jgit.lfs" installMode="root"/>
+      <feature id="org.eclipse.jgit.ssh.apache" installMode="root"/>
+      <feature id="org.eclipse.jgit" installMode="root"/>
+      <feature id="org.eclipse.jpt.common.eclipselink.feature" installMode="root"/>
+      <feature id="org.eclipse.jpt.common.feature" installMode="root"/>
+      <feature id="org.eclipse.jpt.jaxb.eclipselink.feature" installMode="root"/>
+      <feature id="org.eclipse.jpt.jaxb.feature" installMode="root"/>
+      <feature id="org.eclipse.jpt.jpa.eclipselink.feature" installMode="root"/>
+      <feature id="org.eclipse.jpt.jpa.feature" installMode="root"/>
+      <feature id="org.eclipse.jpt.jpadiagrameditor.feature" installMode="root"/>
+      <feature id="org.eclipse.jsf.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.common.fproj.enablement.jdt" installMode="root"/>
+      <feature id="org.eclipse.jst.enterprise_core.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.enterprise_ui.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.enterprise_userdoc.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.jsf.apache.trinidad.tagsupport.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.server_adapters.ext.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.server_adapters.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.server_core.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.server_ui.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.server_userdoc.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.web_core.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.web_js_support.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.web_ui.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.web_userdoc.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.webpageeditor.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.ws.axis2tools.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.ws.cxf.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.ws.jaxws_userdoc.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.ws.jaxws.dom.feature" installMode="root"/>
+      <feature id="org.eclipse.jst.ws.jaxws.feature" installMode="root"/>
+      <feature id="org.eclipse.justj.openjdk.hotspot.jre.full" installMode="root"/>
+      <feature id="org.eclipse.lsp4j.sdk" installMode="root"/>
+      <feature id="org.eclipse.m2e.feature" installMode="root"/>
+      <feature id="org.eclipse.m2e.lemminx.feature" installMode="root"/>
+      <feature id="org.eclipse.m2e.logback.feature" installMode="root"/>
+      <feature id="org.eclipse.m2e.pde.feature" installMode="root"/>
+      <feature id="org.eclipse.m2e.wtp.feature" installMode="root"/>
+      <feature id="org.eclipse.m2e.wtp.jaxrs.feature" installMode="root"/>
+      <feature id="org.eclipse.m2e.wtp.jpa.feature" installMode="root"/>
+      <feature id="org.eclipse.m2e.wtp.jsf.feature" installMode="root"/>
+      <feature id="org.eclipse.pde" installMode="root"/>
+      <feature id="org.eclipse.pde.spies" installMode="root"/>
+      <feature id="org.eclipse.platform" installMode="root"/>
+      <feature id="org.eclipse.rcp" installMode="root"/>
+      <feature id="org.eclipse.sdk" installMode="root"/>
+      <feature id="org.eclipse.tips.feature" installMode="root"/>
+      <feature id="org.eclipse.tm.terminal.connector.local.feature" installMode="root"/>
+      <feature id="org.eclipse.tm.terminal.connector.ssh.feature" installMode="root"/>
+      <feature id="org.eclipse.tm.terminal.connector.telnet.feature" installMode="root"/>
+      <feature id="org.eclipse.tm.terminal.control.feature" installMode="root"/>
+      <feature id="org.eclipse.tm.terminal.feature" installMode="root"/>
+      <feature id="org.eclipse.tm.terminal.view.feature" installMode="root"/>
+      <feature id="org.eclipse.wildwebdeveloper.embedder.node.feature" installMode="root"/>
+      <feature id="org.eclipse.wildwebdeveloper.feature" installMode="root"/>
+      <feature id="org.eclipse.wildwebdeveloper.xml.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.common.fproj" installMode="root"/>
+      <feature id="org.eclipse.wst.common_core.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.common_ui.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.common.fproj" installMode="root"/>
+      <feature id="org.eclipse.wst.jsdt.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.json_core.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.json_ui.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.server_adapters.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.server_core.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.server_ui.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.server_userdoc.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.web_core.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.web_js_support.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.web_ui.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.web_userdoc.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.ws_core.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.ws_ui.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.ws_userdoc.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.xml_core.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.xml_ui.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.xml_userdoc.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.xml.xpath2.processor.feature" installMode="root"/>
+      <feature id="org.eclipse.wst.xsl.feature" installMode="root"/>
+      <feature id="org.jkiss.dbeaver.db.feature" installMode="root"/>
+      <feature id="org.jkiss.dbeaver.db.ui.feature" installMode="root"/>
+      <feature id="org.jkiss.dbeaver.ide.feature" installMode="root"/>
+      <feature id="org.jkiss.dbeaver.runtime.feature" installMode="root"/>
+      <feature id="org.jkiss.dbeaver.ui.extra.feature" installMode="root"/>
+      <feature id="org.jkiss.dbeaver.ui.feature" installMode="root"/>
+      <feature id="org.sf.feeling.decompiler.cfr" installMode="root"/>
+      <feature id="org.sf.feeling.decompiler.jd" installMode="root"/>
+      <feature id="org.sf.feeling.decompiler.procyon" installMode="root"/>
+      <feature id="org.sf.feeling.decompiler" installMode="root"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <property name="org.eclipse.update.reconcile" value="false" />
+   </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
+
+</product>
