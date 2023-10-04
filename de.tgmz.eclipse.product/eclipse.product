@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Eclipse" uid="eclipse" id="org.eclipse.platform.ide" application="org.eclipse.ui.ide.workbench" version="4.29.0" type="features" includeLaunchers="true" autoIncludeRequirements="true">
+<product name="Eclipse" uid="eclipse" id="org.eclipse.platform.ide" application="org.eclipse.ui.ide.workbench" version="4.30.0.qualifier" type="features" includeLaunchers="true" autoIncludeRequirements="true">
 
    <configIni use="default">
       <win32>/de.tgmz.eclipse.product/config.ini</win32>
