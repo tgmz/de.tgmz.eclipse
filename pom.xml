@@ -122,12 +122,14 @@
 						</artifact>
 					</target>
 					<environments>
+						<!-- Adjust this for other platforms -->
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
 							<arch>x86_64</arch>
 						</environment>
-						<!-- Witzig, aber sinnlos und verl&auml;ngert nur den build <environment> 
+						<!-- Adjust this for other platforms
+						<environment> 
 							<os>linux</os> <ws>gtk</ws> <arch>x86_64</arch> </environment> <environment> 
 							<os>macosx</os> <ws>cocoa</ws> <arch>x86_64</arch> </environment> -->
 					</environments>
