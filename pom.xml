@@ -46,7 +46,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<tycho-version>4.0.3</tycho-version>
+		<tycho-version>3.0.4</tycho-version>
 	</properties>
 
 	<modules>
@@ -184,6 +184,33 @@
 			<activation>
 				<jdk>1.8</jdk>
 			</activation>
+		</profile>
+		<profile>
+			<id>odc</id>
+			<properties>
+				<sonar.dependencyCheck.htmlReportPath>${project.build.directory}/dependency-check-report.html</sonar.dependencyCheck.htmlReportPath>
+			</properties>
+			<build>
+				<plugins>
+		            <plugin>
+    	    	        <groupId>org.owasp</groupId>
+        	    	    <artifactId>dependency-check-maven</artifactId>
+            	    	<version>9.0.9</version>
+            	    	<configuration>
+							<assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
+							<failBuildOnCVSS>11</failBuildOnCVSS>
+							<suppressionFile>src/main/resources/dependency-check-suppressions.xml</suppressionFile>
+            	    	</configuration>
+              			<executions>
+                  			<execution>
+                      			<goals>
+                          			<goal>aggregate</goal>
+                      			</goals>
+                  			</execution>
+                  		</executions>
+                  	</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
 </project>
